@@ -1,7 +1,6 @@
 //___FILEHEADER___
 
 import UIKit
-import KRProgressHUD
 
 enum LoadingResult {
     case success
@@ -40,21 +39,21 @@ class BaseViewController: UIViewController {
     
 
     func showBaseLoading(with message: String?, completion: (() -> Void)? = nil) {
-        KRProgressHUD.show(withMessage: message, completion: completion)
+        break
     }
     
     func hideBaseLoading(with result: LoadingResult = .none, message: String? = nil) {
         switch result {
         case .success:
-            KRProgressHUD.showSuccess(withMessage: message)
+            break
         case .none:
-            KRProgressHUD.dismiss()
+            break
         case .error:
-            KRProgressHUD.showError(withMessage: message)
+            break
         case .warning:
-            KRProgressHUD.showWarning(withMessage: message)
+            break
         case .info:
-            KRProgressHUD.showInfo(withMessage: message)
+            break
         }
     }
 }
